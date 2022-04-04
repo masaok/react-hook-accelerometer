@@ -1,13 +1,14 @@
 {
-  "name": "react-hook-accelerometer",
+  "name": "react-hook-ambient-light",
   "version": "1.1.1",
-  "description": "React hook for Accelerometer sensor access",
+  "description": "React hook for Ambient Light Sensor access",
   "keywords": [
     "react",
     "hook",
-    "accelerometer"
+    "ambient",
+    "light"
   ],
-  "repository": "git@github.com:masaok/react-hook-accelerometer.git",
+  "repository": "git@github.com:masaok/react-hook-ambient-light.git",
   "main": "dist/index.js",
   "license": "LGPL",
   "author": "Masao Kitamura",
