@@ -1,27 +1,25 @@
-A React hook to access data from the [Ambient Light API](https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor).
-
 ## Installation
 
 Using `npm`:
 
 ```sh
-npm install --save react-hook-ambient-light
+npm install --save react-hook-accelerometer
 ```
 
 Using `yarn`:
 
 ```sh
-yarn add react-hook-ambient-light
+yarn add react-hook-accelerometer
 ```
 
 ## Usage
 
 ```jsx
-import React from 'react'
-import useAmbientLightSensor from 'react-hook-ambient-light'
+import React from "react";
+import useAccelerometer from "react-hook-accelerometer";
 
 const ComponentWithAccelerometer = () => {
-  const sensor = useAmbientLightSensor()
+  const sensor = useAccelerometer();
 
   return !sensor.error ? (
     <ul>
@@ -30,28 +28,28 @@ const ComponentWithAccelerometer = () => {
       <li>Z: {sensor.z}</li>
     </ul>
   ) : (
-    <p>No ambient light, sorry.</p>
-  )
-}
+    <p>No Accelerometer, sorry.</p>
+  );
+};
 ```
 
 ### Using `SensorOptions`
 
-If you want to use this feature, simply provide `useAmbientLightSensor` with a `SensorOptions` object:
+If you want to use this feature, simply provide `useAccelerometer` with a `SensorOptions` object:
 
 ```jsx
-const sensor = useAmbientLightSensor({
+const sensor = useAccelerometer({
   frequency: 60, // cycles per second
-})
+});
 ```
 
 ## Notes
 
-Access to data from the Ambient Light API needs user permission.
+Access to data from the Accelerometer API needs user permission.
 
 ## Caveats
 
-Ambient Light API is available only in secure contexts (only using HTTPS).
+Accelerometer API is available only in secure contexts (only using HTTPS).
 
 ## Credits
 

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
-const useAmbientLightSensor = ({ frequency } = {}, callback) => {
+const useAccelerometer = ({ frequency } = {}, callback) => {
   const [illuminance, setIlluminance] = useState(null)
 
   useEffect(() => {
-    let sensor = new window.AmbientLightSensor({ frequency })
+    let sensor = new window.Accelerometer({ frequency })
 
     if (sensor) {
       sensor.start()
@@ -16,7 +16,7 @@ const useAmbientLightSensor = ({ frequency } = {}, callback) => {
         }
       }
 
-      sensor.onerror = (event) => {
+      sensor.onerror = event => {
         console.log(event.error.name, event.error.message)
         setIlluminance(null)
       }
@@ -26,4 +26,4 @@ const useAmbientLightSensor = ({ frequency } = {}, callback) => {
   return illuminance
 }
 
-export default useAmbientLightSensor
+export default useAccelerometer
