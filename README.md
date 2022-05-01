@@ -1,3 +1,5 @@
+The Accelerometer sensor includes the force of gravity, unlike the Linear Acceleration sensor.
+
 ## Installation
 
 Using `npm`:
